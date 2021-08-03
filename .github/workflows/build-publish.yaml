@@ -56,6 +56,10 @@ jobs:
       uses: actions/download-artifact@v2
       with:
         path: ./artifacts
+      run: |
+        chmod +x ./artifacts/clique-collector-linux/clique-collector
+        chmod +x ./artifacts/clique-collector-macos/clique-collector
+      # No point making the exe file executable since Windows doesn't care.
 
     - name: Create release
       id: create_release
@@ -84,7 +88,7 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./artifacts/clique-collector-macos/clique-collector
         asset_name: clique-collector-macos
-        asset_content_type: application/x-elf
+        asset_content_type: application/x-mach-o
 
     - name: Upload Windows artifacts to release
       uses: actions/upload-release-asset@v1
@@ -93,5 +97,5 @@ jobs:
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./artifacts/clique-collector-windows/clique-collector.exe
-        asset_name: clique-collector-windows.exe
+        asset_name: clique-collector.exe
         asset_content_type: application/x-msdownload
