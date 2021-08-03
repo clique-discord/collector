@@ -51,10 +51,43 @@ the token for the Discord bot.
     postgres_url = postgres://clique_collector:password-goes-here-jpYU@localhost:5432/clique
     ```
 
-### 4. Compile the service (optional)
+### 4a. Download an executable
 
-If you don't already have a compiled binary of the service, you'll need to
-compile it using Rust:
+You can either download an executable (this step) or compile your own (the
+next step). You may want to compile your own for security reasons, or if there
+is not a pre-compiled executable for your operating system.
+
+#### Linux
+
+ 1. Download the executable
+    (or [click here](https://github.com/clique-discord/collector/releases/latest/download/clique-collector-linux)):
+
+    `wget https://github.com/clique-discord/collector/releases/latest/download/clique-collector-linux -qO clique-collector`
+ 2. Make the file executable:
+
+    `chmod +x clique-collector`
+
+#### MacOS
+
+ 1. Download the executable
+    (or [click here](https://github.com/clique-discord/collector/releases/latest/download/clique-collector-macos)):
+
+    `wget https://github.com/clique-discord/collector/releases/latest/download/clique-collector-macos -qO clique-collector`
+ 2. Make the file executable:
+
+    `chmod +x clique-collector`
+
+#### Windows
+
+ 1. Download the executable with Power shell
+    (or [click here](https://github.com/clique-discord/collector/releases/latest/download/clique-collector.exe)):
+
+    `iwr -outf clique-collector.exe https://github.com/clique-discord/collector/releases/latest/download/clique-collector.exe`
+
+### 4b. Compile an executable
+
+If you don't want to use a pre-compiled executable, you can compile one using
+Rust:
 
  1. [Install Rust](https://www.rust-lang.org/tools/install).
  2. Run `cargo build --release` in the same directory as this README.
