@@ -1,6 +1,6 @@
 [package]
 name = "clique-collector"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2018"
 authors = ["Artemis <artemis@artemisdev.xyz>"]
 description = "A service which connects to Discord and stores message metadata in a database."
