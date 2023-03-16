@@ -1,3 +1,7 @@
+> Archived in favour of a monorepo: [clique-discord/clique](https://github.com/clique-discord).
+
+---
+
 # Clique: Collector
 
 This is the collector service for Clique. It is responsible for collecting
