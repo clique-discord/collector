@@ -1,4 +1,4 @@
-> Archived in favour of a monorepo: [clique-discord/clique](https://github.com/clique-discord).
+> Archived in favour of a monorepo: [clique-discord/clique](https://github.com/clique-discord/clique).
 
 ---
 
